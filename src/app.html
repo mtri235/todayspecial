@@ -1,3 +1,18 @@
 <template>
-  <h1>${message}</h1>
+  <header>
+    <h1>Today Special</h1>
+    <p>Food and Us</p>
+  </header>
+  <nav>
+    <section>
+      <a route-href="route: cook">Cook</a>
+      <a route-href="route: eat">Eat</a>
+    </section>
+    <section>
+      <header><h1>me</h1></header>
+      <a route-href="route: me">Account Details</a>
+      <button>Logout</button>
+    </section>
+  </nav>
+  <router-view></router-view>
 </template>
