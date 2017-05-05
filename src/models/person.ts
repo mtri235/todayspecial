@@ -1,9 +1,15 @@
 import Identity from './identity';
 
-enum Role{ Cook = 1, Eater = 2 };
+export enum Role{ Cook = 1, Eater = 2 };
 
-export default class Person{
-    identity: Identity;
-    image: string;
-    roles: Set<Role>;
+export class Person{
+    public readonly identity: Identity;
+    public readonly image: string;
+    public readonly roles: Set<Role>;
+
+    constructor(identity:Identity, image: string, roles: Set<Role>){
+        this.identity = identity;
+        this.image = image;
+        this. roles = roles;
+    }
 }

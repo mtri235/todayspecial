@@ -1,3 +1,17 @@
 <template>
-    Eat
+    <form>
+        <input type="text" placeholder="What do you feel like today?" bi />
+    </form>
+
+    <ul>
+        <li repeat.for="[id, dish] of dishes">
+            <img alt="${dish.name}" src="${dish.image}" />
+            <h1>${dish.name}</h1>
+            <h2>${dish.cook.identity.firstName}</h2>
+            <p>${dish.description}</p>
+            <p>Serving: ${dish.serving}</p>
+            <button>${dish.price}</button>
+        </li>
+    </ul>
+    <button click.delegate="add">Add</button>
 </template>

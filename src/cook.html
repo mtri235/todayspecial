@@ -1,4 +1,23 @@
 <template>
-    cook
+    <ul>
+        <li repeat.for="[id, dish] of dishes">
+            <img alt="${dish.name}" src="${dish.image}" />
+            <button>Update image</button>
+            <h1><input type="text" value.bind="dish.name" /></h1>
+            <textarea value.bind="dish.description"></textarea>
+            Serving: <input type="number" value.bind="dish.serving" />
+            <input type="number" value.bind="dish.price" />
+        </li>
+    </ul>
+    <button click.delegate="add">Add</button>
 
+    <form submit.delegate="createNewDish()">
+        <img alt="${newDish.name}" src="${newDish.image}" />
+        <button>Update image</button>
+        <h1><input type="text" value.bind="newDish.name" /></h1>
+        <textarea value.bind="newDish.description"></textarea>
+        Serving: <input type="number" value.bind="newDish.serving" />
+        <input type="number" value.bind="newDish.price" />
+        <input type="submit" value="create" />
+    </form>
 </template>

@@ -95,6 +95,11 @@
           "node_modules/requirejs/require.js"
         ],
         "dependencies": [
+          {
+            "name": "rxjs",
+            "path": "../node_modules/@reactivex/rxjs/dist/cjs",
+            "main": "rxjs"
+          },
           "aurelia-binding",
           "aurelia-bootstrapper",
           "aurelia-dependency-injection",
